@@ -5,7 +5,8 @@ const cors = require("cors");
 const app = express();
 const port = 5000;
 
-app.use(cors("*"));
+// Configure CORS to allow requests from all origins
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 const sentiment = new Sentiment();
